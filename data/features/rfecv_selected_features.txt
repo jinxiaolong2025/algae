@@ -1,0 +1,10 @@
+Turbidity
+DO
+electrical conductivity
+TOC
+nitrate nitrogen
+Dry cell weight
+protein(%)
+H(%)
+O(%)
+N conversion rate(%)

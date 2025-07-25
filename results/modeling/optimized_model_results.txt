@@ -1,0 +1,236 @@
+============================================================
+小样本优化模型结果
+============================================================
+
+模型性能排序 (按LOOCV R²):
+----------------------------------------
+ 1. Ridge_Strong
+    训练R²: 0.5971
+    LOOCV R²: nan (±nan)
+    Bootstrap R²: 0.3846 [-0.0459, 0.5616]
+    过拟合程度: nan
+
+ 2. Ridge_Medium
+    训练R²: 0.6471
+    LOOCV R²: nan (±nan)
+    Bootstrap R²: 0.3948 [-0.1957, 0.6015]
+    过拟合程度: nan
+
+ 3. Lasso_Strong
+    训练R²: 0.4572
+    LOOCV R²: nan (±nan)
+    Bootstrap R²: 0.3392 [0.1067, 0.4716]
+    过拟合程度: nan
+
+ 4. Lasso_Medium
+    训练R²: 0.6502
+    LOOCV R²: nan (±nan)
+    Bootstrap R²: 0.4135 [-0.0725, 0.6070]
+    过拟合程度: nan
+
+ 5. ElasticNet_Balanced
+    训练R²: 0.5477
+    LOOCV R²: nan (±nan)
+    Bootstrap R²: 0.3891 [0.1174, 0.5209]
+    过拟合程度: nan
+
+ 6. ElasticNet_L2_Heavy
+    训练R²: 0.5459
+    LOOCV R²: nan (±nan)
+    Bootstrap R²: 0.3875 [0.1153, 0.5173]
+    过拟合程度: nan
+
+ 7. RF_Small
+    训练R²: 0.7136
+    LOOCV R²: nan (±nan)
+    Bootstrap R²: 0.5072 [0.2280, 0.6791]
+    过拟合程度: nan
+
+ 8. RF_Tiny
+    训练R²: 0.6822
+    LOOCV R²: nan (±nan)
+    Bootstrap R²: 0.4868 [0.2321, 0.6577]
+    过拟合程度: nan
+
+ 9. GBM_Conservative
+    训练R²: 0.2713
+    LOOCV R²: nan (±nan)
+    Bootstrap R²: 0.2144 [0.0601, 0.2926]
+    过拟合程度: nan
+
+10. SVR_RBF
+    训练R²: -0.1123
+    LOOCV R²: nan (±nan)
+    Bootstrap R²: -0.1805 [-0.4910, 0.0663]
+    过拟合程度: nan
+
+11. SVR_Linear
+    训练R²: -0.0403
+    LOOCV R²: nan (±nan)
+    Bootstrap R²: -0.1128 [-0.4658, 0.1062]
+    过拟合程度: nan
+
+
+集成模型结果:
+----------------------------------------
+组成模型: Ridge_Strong, Ridge_Medium, Lasso_Strong
+训练R²: 0.5969
+LOOCV R²: nan (±nan)
+
+
+详细结果:
+----------------------------------------
+
+Ridge_Strong:
+  最佳参数: {'alpha': 1.0}
+  训练指标:
+    R²: 0.597083
+    RMSE: 3.064213
+    MAE: 2.429967
+  交叉验证:
+    LOOCV R²: nan
+    LOOCV 标准差: nan
+  Bootstrap验证:
+    均值: 0.384642
+    标准差: 0.170657
+    95% CI: [-0.045896, 0.561602]
+
+Ridge_Medium:
+  最佳参数: {'alpha': 0.1}
+  训练指标:
+    R²: 0.647120
+    RMSE: 2.867638
+    MAE: 2.260776
+  交叉验证:
+    LOOCV R²: nan
+    LOOCV 标准差: nan
+  Bootstrap验证:
+    均值: 0.394836
+    标准差: 0.350831
+    95% CI: [-0.195694, 0.601522]
+
+Lasso_Strong:
+  最佳参数: {'alpha': 0.5}
+  训练指标:
+    R²: 0.457246
+    RMSE: 3.556416
+    MAE: 2.918735
+  交叉验证:
+    LOOCV R²: nan
+    LOOCV 标准差: nan
+  Bootstrap验证:
+    均值: 0.339194
+    标准差: 0.097578
+    95% CI: [0.106690, 0.471571]
+
+Lasso_Medium:
+  最佳参数: {'alpha': 0.01}
+  训练指标:
+    R²: 0.650191
+    RMSE: 2.855132
+    MAE: 2.262419
+  交叉验证:
+    LOOCV R²: nan
+    LOOCV 标准差: nan
+  Bootstrap验证:
+    均值: 0.413480
+    标准差: 0.191598
+    95% CI: [-0.072462, 0.607022]
+
+ElasticNet_Balanced:
+  最佳参数: {'alpha': 0.1, 'l1_ratio': 0.3}
+  训练指标:
+    R²: 0.547694
+    RMSE: 3.246589
+    MAE: 2.634542
+  交叉验证:
+    LOOCV R²: nan
+    LOOCV 标准差: nan
+  Bootstrap验证:
+    均值: 0.389080
+    标准差: 0.109335
+    95% CI: [0.117355, 0.520914]
+
+ElasticNet_L2_Heavy:
+  最佳参数: {'alpha': 0.1, 'l1_ratio': 0.1}
+  训练指标:
+    R²: 0.545946
+    RMSE: 3.252857
+    MAE: 2.641517
+  交叉验证:
+    LOOCV R²: nan
+    LOOCV 标准差: nan
+  Bootstrap验证:
+    均值: 0.387525
+    标准差: 0.108602
+    95% CI: [0.115306, 0.517318]
+
+RF_Small:
+  最佳参数: {'max_depth': 2, 'min_samples_leaf': 2, 'min_samples_split': 4, 'n_estimators': 50}
+  训练指标:
+    R²: 0.713577
+    RMSE: 2.583539
+    MAE: 2.058783
+  交叉验证:
+    LOOCV R²: nan
+    LOOCV 标准差: nan
+  Bootstrap验证:
+    均值: 0.507238
+    标准差: 0.118599
+    95% CI: [0.228005, 0.679068]
+
+RF_Tiny:
+  最佳参数: {'max_depth': 2, 'min_samples_leaf': 3, 'min_samples_split': 6, 'n_estimators': 30}
+  训练指标:
+    R²: 0.682227
+    RMSE: 2.721255
+    MAE: 2.116145
+  交叉验证:
+    LOOCV R²: nan
+    LOOCV 标准差: nan
+  Bootstrap验证:
+    均值: 0.486799
+    标准差: 0.116136
+    95% CI: [0.232118, 0.657749]
+
+GBM_Conservative:
+  最佳参数: {'learning_rate': 0.01, 'max_depth': 2, 'n_estimators': 30, 'subsample': 0.7}
+  训练指标:
+    R²: 0.271282
+    RMSE: 4.120887
+    MAE: 3.552513
+  交叉验证:
+    LOOCV R²: nan
+    LOOCV 标准差: nan
+  Bootstrap验证:
+    均值: 0.214354
+    标准差: 0.058524
+    95% CI: [0.060118, 0.292576]
+
+SVR_RBF:
+  最佳参数: {'C': 0.1, 'epsilon': 0.01, 'gamma': 'scale'}
+  训练指标:
+    R²: -0.112344
+    RMSE: 5.091321
+    MAE: 3.778031
+  交叉验证:
+    LOOCV R²: nan
+    LOOCV 标准差: nan
+  Bootstrap验证:
+    均值: -0.180540
+    标准差: 0.183738
+    95% CI: [-0.491047, 0.066292]
+
+SVR_Linear:
+  最佳参数: {'C': 0.01, 'epsilon': 0.01}
+  训练指标:
+    R²: -0.040266
+    RMSE: 4.923605
+    MAE: 3.670446
+  交叉验证:
+    LOOCV R²: nan
+    LOOCV 标准差: nan
+  Bootstrap验证:
+    均值: -0.112801
+    标准差: 0.180851
+    95% CI: [-0.465841, 0.106206]

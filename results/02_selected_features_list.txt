@@ -1,0 +1,12 @@
+选中的特征列表
+==============================
+
+ 1. H(%)_squared
+ 2. Total photosynthetic pigments
+ 3. protein_polysaccharide_ratio
+ 4. H(%)
+ 5. BOD
+ 6. O(%)
+ 7. Algal density（×10^5cells/ml)
+ 8. TOC
+ 9. polysaccharide(%)

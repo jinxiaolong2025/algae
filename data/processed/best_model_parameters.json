@@ -1,0 +1,54 @@
+{
+  "best_model": "RandomForest_Aggressive",
+  "best_cv_r2": -0.31217744655668717,
+  "best_test_r2": 0.4500455998910414,
+  "best_parameters": {
+    "max_depth": 7,
+    "max_features": "sqrt",
+    "min_samples_leaf": 1,
+    "min_samples_split": 2,
+    "n_estimators": 300
+  },
+  "all_model_params": {
+    "RandomForest_Aggressive": {
+      "max_depth": 7,
+      "max_features": "sqrt",
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "n_estimators": 300
+    },
+    "GradientBoosting_Tuned": {
+      "subsample": 0.8,
+      "n_estimators": 100,
+      "min_samples_split": 10,
+      "max_depth": 3,
+      "learning_rate": 0.2
+    },
+    "ElasticNet_Optimized": {
+      "alpha": 1.0,
+      "l1_ratio": 0.1,
+      "selection": "random"
+    },
+    "SVR_Polynomial": {
+      "kernel": "rbf",
+      "gamma": 0.001,
+      "epsilon": 0.2,
+      "degree": 3,
+      "C": 100
+    },
+    "MLP_Deep": {
+      "learning_rate_init": 0.1,
+      "learning_rate": "adaptive",
+      "hidden_layer_sizes": [
+        100,
+        50
+      ],
+      "alpha": 0.01,
+      "activation": "tanh"
+    },
+    "Ridge_Baseline": {
+      "alpha": 10.0,
+      "solver": "auto"
+    }
+  }
+}

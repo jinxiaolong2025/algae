@@ -1,0 +1,68 @@
+============================================================
+特征选择详细报告
+============================================================
+
+1. 数据基本信息
+------------------------------
+原始特征数: 48
+选中特征数: 18
+选择比例: 37.5%
+
+2. 各方法选择结果
+------------------------------
+correlation: 43 个特征
+mutual_info: 20 个特征
+univariate: 18 个特征
+tree_based: 15 个特征
+lasso: 0 个特征
+rfe: 12 个特征
+rfecv: 8 个特征
+
+3. 最终选中特征 (按投票数排序)
+------------------------------
+ 1. ✓ O(%): 6 票
+ 2. ✓ H(%)_squared: 6 票
+ 3. ✓ protein_Total photosynthetic pigments_interaction: 6 票
+ 4. ✓ S(%): 5 票
+ 5. ✓ DO: 5 票
+ 6. ✓ H_O_interaction: 5 票
+ 7. ✓ protein(%)_sqrt: 5 票
+ 8. ✓ H(%): 5 票
+ 9. ✓ O(%)_squared: 4 票
+10. ✓ O(%)_sqrt: 4 票
+11. ✓ protein_polysaccharide_ratio: 4 票
+12. ✓ H(%)_sqrt: 4 票
+13. ✓ nitrate nitrogen: 4 票
+14. ✓ protein_H_interaction: 4 票
+15. ✓ N conversion rate(%): 3 票
+16. ✓ protein(%): 3 票
+17. ✓ protein_O_interaction: 3 票
+18. ✓ protein(%)_squared: 3 票
+
+4. 特征稳定性验证
+------------------------------
+平均R²: -0.3117
+标准差: 1.2793
+稳定性分数: -3.1043
+交叉验证分数: 0.335, -2.868, 0.356, 0.220, 0.398
+
+5. 特征相关性分析
+------------------------------
+ 1. H_O_interaction: 0.491
+ 2. H(%)_squared: 0.407
+ 3. H(%): 0.379
+ 4. O(%)_squared: 0.374
+ 5. protein_H_interaction: 0.369
+ 6. O(%): 0.365
+ 7. H(%)_sqrt: 0.362
+ 8. O(%)_sqrt: 0.360
+ 9. protein_Total photosynthetic pigments_interaction: 0.353
+10. protein_polysaccharide_ratio: 0.329
+11. protein_O_interaction: 0.307
+12. protein(%): 0.291
+13. protein(%)_squared: 0.288
+14. protein(%)_sqrt: 0.262
+15. N conversion rate(%): 0.116
+16. S(%): 0.050
+17. DO: 0.038
+18. nitrate nitrogen: 0.021

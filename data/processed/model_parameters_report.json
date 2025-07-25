@@ -1,0 +1,398 @@
+{
+  "model_configurations": {
+    "RandomForest_Aggressive": {
+      "description": "随机森林回归器 - 激进参数搜索",
+      "search_type": "grid",
+      "param_grid": {
+        "n_estimators": [
+          100,
+          200,
+          300
+        ],
+        "max_depth": [
+          3,
+          5,
+          7,
+          null
+        ],
+        "min_samples_split": [
+          2,
+          5,
+          10
+        ],
+        "min_samples_leaf": [
+          1,
+          2,
+          4
+        ],
+        "max_features": [
+          "sqrt",
+          "log2",
+          null
+        ]
+      },
+      "n_iter": "N/A"
+    },
+    "GradientBoosting_Tuned": {
+      "description": "梯度提升回归器 - 调优版本",
+      "search_type": "randomized",
+      "param_grid": {
+        "n_estimators": [
+          100,
+          200,
+          300
+        ],
+        "learning_rate": [
+          0.01,
+          0.1,
+          0.2
+        ],
+        "max_depth": [
+          3,
+          5,
+          7
+        ],
+        "subsample": [
+          0.8,
+          0.9,
+          1.0
+        ],
+        "min_samples_split": [
+          2,
+          5,
+          10
+        ]
+      },
+      "n_iter": 50
+    },
+    "ElasticNet_Optimized": {
+      "description": "弹性网络回归器 - 优化版本",
+      "search_type": "grid",
+      "param_grid": {
+        "alpha": [
+          0.001,
+          0.01,
+          0.1,
+          1.0,
+          10.0
+        ],
+        "l1_ratio": [
+          0.1,
+          0.3,
+          0.5,
+          0.7,
+          0.9
+        ],
+        "selection": [
+          "cyclic",
+          "random"
+        ]
+      },
+      "n_iter": "N/A"
+    },
+    "SVR_Polynomial": {
+      "description": "支持向量回归器 - 多项式核",
+      "search_type": "randomized",
+      "param_grid": {
+        "kernel": [
+          "poly",
+          "rbf"
+        ],
+        "degree": [
+          2,
+          3,
+          4
+        ],
+        "C": [
+          0.1,
+          1,
+          10,
+          100
+        ],
+        "gamma": [
+          "scale",
+          "auto",
+          0.001,
+          0.01,
+          0.1
+        ],
+        "epsilon": [
+          0.01,
+          0.1,
+          0.2
+        ]
+      },
+      "n_iter": 30
+    },
+    "MLP_Deep": {
+      "description": "多层感知机 - 深度网络",
+      "search_type": "randomized",
+      "param_grid": {
+        "hidden_layer_sizes": [
+          [
+            50
+          ],
+          [
+            100
+          ],
+          [
+            50,
+            50
+          ],
+          [
+            100,
+            50
+          ],
+          [
+            100,
+            100
+          ]
+        ],
+        "activation": [
+          "relu",
+          "tanh"
+        ],
+        "alpha": [
+          0.0001,
+          0.001,
+          0.01
+        ],
+        "learning_rate": [
+          "constant",
+          "adaptive"
+        ],
+        "learning_rate_init": [
+          0.001,
+          0.01,
+          0.1
+        ]
+      },
+      "n_iter": 40
+    },
+    "Ridge_Baseline": {
+      "description": "岭回归 - 基线模型",
+      "search_type": "grid",
+      "param_grid": {
+        "alpha": [
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "solver": [
+          "auto",
+          "svd",
+          "cholesky",
+          "lsqr"
+        ]
+      },
+      "n_iter": "N/A"
+    }
+  },
+  "optimization_results": {
+    "RandomForest_Aggressive": {
+      "success": true,
+      "best_score": -0.06245659639643766,
+      "best_params": {
+        "max_depth": 7,
+        "max_features": "sqrt",
+        "min_samples_leaf": 1,
+        "min_samples_split": 2,
+        "n_estimators": 300
+      }
+    },
+    "GradientBoosting_Tuned": {
+      "success": true,
+      "best_score": 0.08083771574513714,
+      "best_params": {
+        "subsample": 0.8,
+        "n_estimators": 100,
+        "min_samples_split": 10,
+        "max_depth": 3,
+        "learning_rate": 0.2
+      }
+    },
+    "ElasticNet_Optimized": {
+      "success": true,
+      "best_score": -0.26986540398760617,
+      "best_params": {
+        "alpha": 1.0,
+        "l1_ratio": 0.1,
+        "selection": "random"
+      }
+    },
+    "SVR_Polynomial": {
+      "success": true,
+      "best_score": -0.45227597807980147,
+      "best_params": {
+        "kernel": "rbf",
+        "gamma": 0.001,
+        "epsilon": 0.2,
+        "degree": 3,
+        "C": 100
+      }
+    },
+    "MLP_Deep": {
+      "success": true,
+      "best_score": -0.4607426327262635,
+      "best_params": {
+        "learning_rate_init": 0.1,
+        "learning_rate": "adaptive",
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "alpha": 0.01,
+        "activation": "tanh"
+      }
+    },
+    "Ridge_Baseline": {
+      "success": true,
+      "best_score": -0.29466795341218993,
+      "best_params": {
+        "alpha": 10.0,
+        "solver": "auto"
+      }
+    }
+  },
+  "performance_results": {
+    "RandomForest_Aggressive": {
+      "train_r2": 0.9183799175031673,
+      "train_rmse": 1.4244705760658904,
+      "train_mae": 1.2103814667599577,
+      "test_r2": 0.4500455998910414,
+      "test_rmse": 3.1264392339577274,
+      "test_mae": 2.089036017606108,
+      "cv_r2_mean": -0.31217744655668717,
+      "cv_r2_std": 1.2131819909058148,
+      "best_params": {
+        "max_depth": 7,
+        "max_features": "sqrt",
+        "min_samples_leaf": 1,
+        "min_samples_split": 2,
+        "n_estimators": 300
+      }
+    },
+    "GradientBoosting_Tuned": {
+      "train_r2": 0.9999130886741899,
+      "train_rmse": 0.04648289362636941,
+      "train_mae": 0.03946751226563655,
+      "test_r2": 0.3061937720428092,
+      "test_rmse": 3.5116057258643583,
+      "test_mae": 2.498672013430689,
+      "cv_r2_mean": -0.6518880105172111,
+      "cv_r2_std": 2.3145334391606247,
+      "best_params": {
+        "subsample": 0.8,
+        "n_estimators": 100,
+        "min_samples_split": 10,
+        "max_depth": 3,
+        "learning_rate": 0.2
+      }
+    },
+    "ElasticNet_Optimized": {
+      "train_r2": 0.283367220062131,
+      "train_rmse": 4.220882893034505,
+      "train_mae": 3.723258190892648,
+      "test_r2": 0.09348273172026944,
+      "test_rmse": 4.013975267476167,
+      "test_mae": 2.93532223456302,
+      "cv_r2_mean": -0.6727595616754861,
+      "cv_r2_std": 1.4224819065729692,
+      "best_params": {
+        "alpha": 1.0,
+        "l1_ratio": 0.1,
+        "selection": "random"
+      }
+    },
+    "SVR_Polynomial": {
+      "train_r2": 0.18395484328688627,
+      "train_rmse": 4.50414189712395,
+      "train_mae": 3.6451823476924754,
+      "test_r2": 0.25120351710309574,
+      "test_rmse": 3.648115245623499,
+      "test_mae": 2.624834038342781,
+      "cv_r2_mean": -0.6672873843324025,
+      "cv_r2_std": 1.043814886600296,
+      "best_params": {
+        "kernel": "rbf",
+        "gamma": 0.001,
+        "epsilon": 0.2,
+        "degree": 3,
+        "C": 100
+      }
+    },
+    "MLP_Deep": {
+      "train_r2": 0.3136138072364696,
+      "train_rmse": 4.130848215853977,
+      "train_mae": 3.2502210238936278,
+      "test_r2": -0.7664379629452713,
+      "test_rmse": 5.603196412563755,
+      "test_mae": 3.982070063127746,
+      "cv_r2_mean": -1.0145000462891727,
+      "cv_r2_std": 2.2852313221602296,
+      "best_params": {
+        "learning_rate_init": 0.1,
+        "learning_rate": "adaptive",
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "alpha": 0.01,
+        "activation": "tanh"
+      }
+    },
+    "Ridge_Baseline": {
+      "train_r2": 0.34684985279168357,
+      "train_rmse": 4.029595776852892,
+      "train_mae": 3.5455176573614704,
+      "test_r2": 0.056206033231777974,
+      "test_rmse": 4.09567276207767,
+      "test_mae": 3.009021291680392,
+      "cv_r2_mean": -0.8288204511216961,
+      "cv_r2_std": 1.7785682257688524,
+      "best_params": {
+        "alpha": 10.0,
+        "solver": "auto"
+      }
+    }
+  },
+  "model_ranking": [
+    [
+      "RandomForest_Aggressive",
+      -0.31217744655668717
+    ],
+    [
+      "GradientBoosting_Tuned",
+      -0.6518880105172111
+    ],
+    [
+      "SVR_Polynomial",
+      -0.6672873843324025
+    ],
+    [
+      "ElasticNet_Optimized",
+      -0.6727595616754861
+    ],
+    [
+      "Ridge_Baseline",
+      -0.8288204511216961
+    ],
+    [
+      "MLP_Deep",
+      -1.0145000462891727
+    ]
+  ],
+  "data_info": {
+    "n_samples": 36,
+    "n_features": 3,
+    "feature_names": [
+      "S(%)",
+      "H(%)",
+      "Dry cell weight"
+    ],
+    "train_size": 25,
+    "test_size": 11
+  }
+}

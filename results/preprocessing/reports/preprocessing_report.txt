@@ -1,0 +1,42 @@
+==================================================
+数据预处理报告
+==================================================
+
+1. 原始数据摘要
+--------------------
+数据形状: (36, 31)
+数值型特征数: 30
+分类型特征数: 1
+总缺失值数: 50
+
+2. 数据清洗日志
+--------------------
+- 列 'S(%)' 中 11 个0值转换为NaN
+- 列 'ammonia nitrogen' 中 2 个0值转换为NaN
+- 列 'N conversion rate(%)' 中 1 个0值转换为NaN
+- 列 'ammonia nitrogen' 使用 adaptive 策略填充了 2 个缺失值
+- 列 'phosphate' 使用 adaptive 策略填充了 8 个缺失值
+- 列 'Unnamed: 15' 使用 adaptive 策略填充了 36 个缺失值
+- 列 'N(%)' 使用 adaptive 策略填充了 2 个缺失值
+- 列 'C(%)' 使用 adaptive 策略填充了 2 个缺失值
+- 列 'S(%)' 使用 adaptive 策略填充了 13 个缺失值
+- 列 'N conversion rate(%)' 使用 adaptive 策略填充了 1 个缺失值
+- 列 'Turbidity' 使用 robust_zscore 方法处理了 1 个异常值
+- 列 'COD' 使用 robust_zscore 方法处理了 1 个异常值
+- 列 'BOD' 使用 robust_zscore 方法处理了 4 个异常值
+- 列 'ammonia nitrogen' 使用 robust_zscore 方法处理了 5 个异常值
+- 列 'phosphate' 使用 robust_zscore 方法处理了 8 个异常值
+- 列 'TP' 使用 robust_zscore 方法处理了 8 个异常值
+- 列 'Algal density（×10^5cells/ml)' 使用 robust_zscore 方法处理了 5 个异常值
+- 列 'Total photosynthetic pigments' 使用 robust_zscore 方法处理了 3 个异常值
+- 列 'protein(%)' 使用 robust_zscore 方法处理了 8 个异常值
+- 列 'lipid(%)' 使用 robust_zscore 方法处理了 1 个异常值
+- 列 'C(%)' 使用 robust_zscore 方法处理了 1 个异常值
+- 列 'S(%)' 使用 robust_zscore 方法处理了 7 个异常值
+- 列 'O(%)' 使用 robust_zscore 方法处理了 1 个异常值
+- 列 'P(%)' 使用 robust_zscore 方法处理了 3 个异常值
+
+3. 处理结果
+--------------------
+最终数据形状: (36, 31)
+处理参数: {'missing_strategy': 'adaptive', 'outlier_method': 'robust_zscore', 'zero_invalid_cols': ['S(%)', 'ammonia nitrogen', 'N conversion rate(%)']}
