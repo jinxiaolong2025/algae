@@ -1,0 +1,11 @@
+method,n_features,features
+variance_threshold,36,"Turbidity , Chroma, pH , DO, electrical conductivity, UV254, COD, TOC, BOD, nitrate nitrogen, ammonia nitrogen, TN, phosphate, TP, Algal density（×10^5cells/ml),  Specific growth rate, Total photosynthetic pigments, Dry cell weight, protein(%), polysaccharide(%), N(%), C(%), H(%), O(%), P(%), N conversion rate(%), P conversion rate(%), C_N_ratio, N_P_ratio, C_P_ratio, DO_COD_ratio, nitrate_ammonia_ratio, pigment_per_cell, cell_weight, TN_TP_ratio, CHON_balance"
+correlation,33,"Turbidity , Chroma, pH , DO, electrical conductivity, UV254, COD, TOC, BOD, ammonia nitrogen, TN, phosphate, TP, Total photosynthetic pigments, Dry cell weight, protein(%), polysaccharide(%), N(%), C(%), H(%), O(%), P(%), N conversion rate(%), P conversion rate(%), C_N_ratio, N_P_ratio, C_P_ratio, DO_COD_ratio, nitrate_ammonia_ratio, pigment_per_cell, cell_weight, TN_TP_ratio, CHON_balance"
+f_regression,4,"protein(%), H(%), O(%), pigment_per_cell"
+mutual_info,4,"Turbidity , nitrate nitrogen, TN, pigment_per_cell"
+random_forest,4,"H(%), pigment_per_cell, protein(%), nitrate_ammonia_ratio"
+extra_trees,4,"H(%), protein(%), DO, O(%)"
+lasso,24,"pH , electrical conductivity, UV254, COD, BOD, TN, phosphate, Total photosynthetic pigments, protein(%), polysaccharide(%), N(%), C(%), H(%), O(%), P(%), P conversion rate(%), N_P_ratio, C_P_ratio, DO_COD_ratio, nitrate_ammonia_ratio, pigment_per_cell, cell_weight, TN_TP_ratio, CHON_balance"
+rfe,4,"protein(%), H(%), nitrate_ammonia_ratio, pigment_per_cell"
+rfecv,23,"Turbidity , Chroma, DO, electrical conductivity, COD, TOC, BOD, nitrate nitrogen, TN, TP, Algal density（×10^5cells/ml), Dry cell weight, protein(%), C(%), H(%), O(%), N conversion rate(%), N_P_ratio, nitrate_ammonia_ratio, pigment_per_cell, cell_weight, TN_TP_ratio, CHON_balance"
+ensemble,6,"TN, protein(%), H(%), O(%), nitrate_ammonia_ratio, pigment_per_cell"
