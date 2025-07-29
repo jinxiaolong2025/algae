@@ -67,7 +67,7 @@ def get_feature_ranges():
         project_root = os.path.dirname(os.path.dirname(current_dir))
 
         # 构建原始数据路径
-        raw_data_path = os.path.join(project_root, "data", "raw", "数据.xlsx")
+        raw_data_path = os.path.join(project_root, "data", "raw_analysis", "数据.xlsx")
 
         # 加载原始数据来获取特征范围
         raw_data = pd.read_excel(raw_data_path)
@@ -151,7 +151,7 @@ def get_standardization_params():
         project_root = os.path.dirname(os.path.dirname(current_dir))
 
         # 加载原始数据
-        raw_data_path = os.path.join(project_root, "data", "raw", "数据.xlsx")
+        raw_data_path = os.path.join(project_root, "data", "raw_analysis", "数据.xlsx")
         raw_data = pd.read_excel(raw_data_path)
 
         # 获取特征列
