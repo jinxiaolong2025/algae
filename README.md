@@ -311,7 +311,7 @@ Algal density: 原偏度=2.050 → 变换后=0.732 → 最终=1.995
 
 #### 2. 散点图 (`scatter_plots_after_filling.png`)
 
-![散点图](../results/data_preprocess/after_filling/scatter_plots_after_filling.png)
+![散点图](results/data_preprocess/after_filling/scatter_plots_after_filling.png)
 
 **技术分析**:
 - **用途**: 展示相关系数 > 0.5的高相关性特征对之间的关系
@@ -331,7 +331,7 @@ Algal density: 原偏度=2.050 → 变换后=0.732 → 最终=1.995
 
 #### 3. 直方图 (`histograms_after_filling.png`)
 
-![直方图](../results/data_preprocess/after_filling/histograms_after_filling.png)
+![直方图](results/data_preprocess/after_filling/histograms_after_filling.png)
 
 **技术分析**:
 - **用途**: 展示32个特征的频率分布和概率密度
@@ -354,7 +354,7 @@ Algal density: 原偏度=2.050 → 变换后=0.732 → 最终=1.995
 
 ##### 4.1 轻度偏斜特征处理对比
 
-![轻度偏斜处理](../results/data_preprocess/outlier_treatment_Light_Skewness.png)
+![轻度偏斜处理](results/data_preprocess/outlier_treatment_Light_Skewness.png)
 
 **技术分析**:
 - **处理策略**: 5%-95%分位数截断 (Winsorize)
@@ -369,7 +369,7 @@ Algal density: 原偏度=2.050 → 变换后=0.732 → 最终=1.995
 
 ##### 4.2 中度偏斜特征处理对比
 
-![中度偏斜处理](../results/data_preprocess/outlier_treatment_Moderate_Skewness.png)
+![中度偏斜处理](results/data_preprocess/outlier_treatment_Moderate_Skewness.png)
 
 **技术分析**:
 - **处理策略**: 10%-90%分位数截断
@@ -384,7 +384,7 @@ Algal density: 原偏度=2.050 → 变换后=0.732 → 最终=1.995
 
 ##### 4.3 重度偏斜特征处理对比
 
-![重度偏斜处理](../results/data_preprocess/outlier_treatment_Heavy_Skewness.png)
+![重度偏斜处理](results/data_preprocess/outlier_treatment_Heavy_Skewness.png)
 
 **技术分析**:
 - **处理策略**: 对数变换 + 5%-95%分位数截断
@@ -399,7 +399,7 @@ Algal density: 原偏度=2.050 → 变换后=0.732 → 最终=1.995
 
 #### 5. 偏度改善分析图 (`skewness_improvement_analysis.png`)
 
-![偏度改善分析](../results/data_preprocess/skewness_improvement_analysis.png)
+![偏度改善分析](results/data_preprocess/skewness_improvement_analysis.png)
 
 **技术分析**:
 - **用途**: 量化分析31个特征的偏度改善效果
@@ -1313,7 +1313,7 @@ Ridge Regression    -0.3125     -1.5677     -1.2553    -401.73
 **生成的图表详解**:
 
 #### 10.1 遗传算法进化过程图
-![进化过程图](../results/feature_selection/02_evolution_process/ga_evolution_process.png)
+![进化过程图](results/feature_selection/02_evolution_process/ga_evolution_process.png)
 
 **技术分析**:
 - **左上**: 适应度进化曲线，显示平均适应度和最佳适应度的变化
@@ -1327,7 +1327,7 @@ Ridge Regression    -0.3125     -1.5677     -1.2553    -401.73
 - 选择压力适中，避免了过早收敛
 
 #### 10.2 特征重要性对比图
-![特征重要性对比图](../results/feature_selection/05_model_validation/ga_feature_importance_comparison.png)
+![特征重要性对比图](results/feature_selection/05_model_validation/ga_feature_importance_comparison.png)
 
 **技术分析**:
 - **左图**: 所有特征重要性排序（前20名），红色表示已选择特征
@@ -1339,7 +1339,7 @@ Ridge Regression    -0.3125     -1.5677     -1.2553    -401.73
 - 特征选择策略与重要性排序高度一致
 
 #### 10.3 模型性能对比图
-![模型性能对比图](../results/feature_selection/05_model_validation/ga_model_comparison.png)
+![模型性能对比图](results/feature_selection/05_model_validation/ga_model_comparison.png)
 
 **技术分析**:
 - **左图**: 平均R²分数对比，包含误差条
@@ -1352,7 +1352,7 @@ Ridge Regression    -0.3125     -1.5677     -1.2553    -401.73
 - 线性模型在原始特征上表现极差，但通过特征选择得到显著改善
 
 #### 10.4 收敛分析图
-![收敛分析图](../results/feature_selection/03_convergence_analysis/ga_convergence_analysis.png)
+![收敛分析图](results/feature_selection/03_convergence_analysis/ga_convergence_analysis.png)
 
 **技术分析**:
 - **左上**: 收敛曲线分析，包含趋势线
@@ -1366,7 +1366,7 @@ Ridge Regression    -0.3125     -1.5677     -1.2553    -401.73
 - 最终收敛指标显示算法性能优秀
 
 #### 10.5 特征相关性热力图
-![特征相关性热力图](../results/feature_selection/06_correlation_analysis/feature_correlation_heatmap.png)
+![特征相关性热力图](results/feature_selection/06_correlation_analysis/feature_correlation_heatmap.png)
 
 **技术分析**:
 - **左图**: 选择特征间的相关性热力图
@@ -1378,7 +1378,7 @@ Ridge Regression    -0.3125     -1.5677     -1.2553    -401.73
 - 特征组合具有良好的互补性
 
 #### 10.6 种群多样性分析图
-![种群多样性分析图](../results/feature_selection/03_convergence_analysis/population_diversity_analysis.png)
+![种群多样性分析图](results/feature_selection/03_convergence_analysis/population_diversity_analysis.png)
 
 **技术分析**:
 - **左上**: 多样性变化趋势
@@ -1392,7 +1392,7 @@ Ridge Regression    -0.3125     -1.5677     -1.2553    -401.73
 - 收敛过程符合遗传算法理论预期
 
 #### 10.7 最优特征分布图
-![最优特征分布图](../results/feature_selection/04_feature_selection/optimal_feature_distribution.png)
+![最优特征分布图](results/feature_selection/04_feature_selection/optimal_feature_distribution.png)
 
 **技术分析**:
 - **左上**: 特征选择分布饼图
@@ -2317,7 +2317,7 @@ XGBoost模型的特征重要性排序：
 
 ### 6.1 交叉验证性能对比
 
-![交叉验证性能对比](../results/model_training/visualizations/cv_performance_comparison.png)
+![交叉验证性能对比](results/model_training/visualizations/cv_performance_comparison.png)
 
 **图表解读**：
 - **左图 (R² 分数)**：XGBoost明显领先，Random Forest次之
@@ -2330,7 +2330,7 @@ XGBoost模型的特征重要性排序：
 
 ### 6.2 模型性能雷达图
 
-![模型性能雷达图](../results/model_training/visualizations/model_performance_radar.png)
+![模型性能雷达图](results/model_training/visualizations/model_performance_radar.png)
 
 **图表解读**：
 - **雷达图显示**：XGBoost在三个维度上都表现最佳
@@ -2343,7 +2343,7 @@ XGBoost模型的特征重要性排序：
 
 ### 6.3 模型性能热力图
 
-![模型性能热力图](../results/model_training/visualizations/performance_heatmap.png)
+![模型性能热力图](results/model_training/visualizations/performance_heatmap.png)
 
 **图表解读**：
 - **颜色编码**：红色表示高性能，蓝色表示低性能
@@ -2356,7 +2356,7 @@ XGBoost模型的特征重要性排序：
 
 ### 6.4 特征重要性分析
 
-![特征重要性](../results/model_training/visualizations/feature_importance_xgboost.png)
+![特征重要性](results/model_training/visualizations/feature_importance_xgboost.png)
 
 **图表解读**：
 - **TOC (0.304)**：最重要特征，总有机碳含量
@@ -2370,7 +2370,7 @@ XGBoost模型的特征重要性排序：
 
 ### 6.5 预测准确性分析
 
-![预测vs真实值](../results/model_training/visualizations/prediction_vs_actual_xgboost.png)
+![预测vs真实值](results/model_training/visualizations/prediction_vs_actual_xgboost.png)
 
 **图表解读**：
 - **散点分布**：点越接近红色对角线表示预测越准确
@@ -2384,7 +2384,7 @@ XGBoost模型的特征重要性排序：
 
 ### 6.6 残差分析
 
-![残差分析](../results/model_training/visualizations/residual_analysis_xgboost.png)
+![残差分析](results/model_training/visualizations/residual_analysis_xgboost.png)
 
 **四象限分析**：
 
@@ -2406,7 +2406,7 @@ XGBoost模型的特征重要性排序：
 
 ### 6.7 数据增强效果分析
 
-![数据分布对比](../results/model_training/visualizations/data_distribution_comparison.png)
+![数据分布对比](results/model_training/visualizations/data_distribution_comparison.png)
 
 **四象限分析**：
 
@@ -2428,7 +2428,7 @@ XGBoost模型的特征重要性排序：
 
 ### 6.8 特征相关性变化
 
-![特征相关性对比](../results/model_training/visualizations/feature_correlation_comparison.png)
+![特征相关性对比](results/model_training/visualizations/feature_correlation_comparison.png)
 
 **三部分分析**：
 
