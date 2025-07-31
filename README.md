@@ -290,7 +290,7 @@ Algal density: 原偏度=2.050 → 变换后=0.732 → 最终=1.995
 
 #### 1. 箱线图 (`boxplots_after_filling.png`)
 
-![箱线图](../results/data_preprocess/after_filling/boxplots_after_filling.png)
+![箱线图](results/data_preprocess/after_filling/boxplots_after_filling.png)
 
 **技术分析**:
 - **用途**: 展示32个数值特征的分布特征、中位数、四分位数和异常值
