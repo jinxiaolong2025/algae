@@ -1,0 +1,2 @@
+model_type,n_estimators,max_depth,learning_rate,subsample,colsample_bytree,reg_alpha,reg_lambda,min_child_weight,gamma,n_features,cv_r2,cv_mae,cv_rmse
+XGBoost,45,3,0.1,0.8,0.9,0.7,1.2,3,0.3,6,0.5055479189523032,2.2355280010352074,2.812023456119959

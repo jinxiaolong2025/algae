@@ -1,0 +1,2 @@
+model_name,cv_r2,cv_mae,cv_rmse,cv_r2_std,cv_mae_std,cv_rmse_std,n_features,feature_names,final_cv_r2,final_cv_mae,final_cv_rmse,final_cv_r2_std,final_cv_mae_std,final_cv_rmse_std
+XGBoost,0.5055479189523032,2.2355280010352074,2.812023456119959,0.28210161106127324,0.9672513650700564,1.2777827267456294,6,"['Chroma', 'DO', 'electrical conductivity', 'TOC', 'TN', 'P conversion rate(%)']",0.42638194516484906,3.009614025522365,3.527507186473244,0.3062948686889749,0.9638815948554345,1.1563455663828388

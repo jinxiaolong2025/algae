@@ -1,0 +1,32 @@
+特征,偏度类别,偏度值,处理异常值数量
+Chroma,light_skew,0.662,4
+pH ,light_skew,0.338,4
+electrical conductivity,light_skew,-0.134,4
+UV254,light_skew,0.097,3
+TOC,light_skew,0.838,4
+ Specific growth rate,light_skew,0.863,4
+Dry cell weight,light_skew,0.680,4
+polysaccharide(%),light_skew,0.853,4
+N(%),light_skew,0.535,4
+H(%),light_skew,-0.685,4
+O(%),light_skew,-0.055,4
+N conversion rate(%),light_skew,0.042,4
+P conversion rate(%),light_skew,0.394,4
+Turbidity ,moderate_skew,1.987,8
+DO,moderate_skew,1.344,8
+COD,moderate_skew,1.221,8
+BOD,moderate_skew,1.417,8
+nitrate nitrogen,moderate_skew,1.175,8
+ammonia nitrogen,moderate_skew,1.665,8
+TN,moderate_skew,1.064,8
+Nitrogen to phosphorus ratio,moderate_skew,1.162,8
+Total photosynthetic pigments,moderate_skew,1.866,8
+protein(%),moderate_skew,1.312,8
+C(%),moderate_skew,-1.632,8
+P(%),moderate_skew,1.997,8
+Organic carbon nitrogen ratio,heavy_skew,5.159,4
+Organic carbon to phosphorus ratio,heavy_skew,2.484,4
+Dissolved oxygen and nitrogen ratio,heavy_skew,4.850,4
+phosphate,heavy_skew,4.394,4
+TP,heavy_skew,4.405,4
+Algal density（×10^5cells/ml),heavy_skew,2.050,4
